@@ -16,8 +16,21 @@ router.get('/', async (req, res) => {
             condition: ['sunny', 'partly-cloudy', 'cloudy', 'rainy'][Math.floor(Math.random() * 4)],
             location: location
         };
-        // Get AI-powered farming advice based on location
-        const farmingAdvice = await (0, gemini_client_1.getWeatherAdvice)(location, mockWeatherData);
+        // Try to get AI-powered farming advice, but fallback if it fails
+        let farmingAdvice;
+        try {
+            farmingAdvice = await (0, gemini_client_1.getWeatherAdvice)(location, mockWeatherData);
+        }
+        catch (error) {
+            console.error('Failed to get AI weather advice, using fallback:', error);
+            // Fallback farming advice based on weather conditions
+            const fallbackAdvice = [
+                `With ${mockWeatherData.temperature}°C temperature and ${mockWeatherData.humidity}% humidity, it's a good time for ${mockWeatherData.condition === 'rainy' ? 'indoor activities and planning' : 'outdoor farming activities'}.`,
+                `Current conditions are suitable for ${mockWeatherData.condition === 'sunny' ? 'planting and harvesting' : mockWeatherData.condition === 'rainy' ? 'soil preparation and planning' : 'general farm maintenance'}.`,
+                `Based on Kerala's tropical climate, monitor soil moisture regularly and use organic fertilizers. The current humidity level of ${mockWeatherData.humidity}% suggests ${mockWeatherData.humidity > 80 ? 'high risk of fungal diseases - consider preventive measures' : 'good conditions for plant growth'}.`
+            ];
+            farmingAdvice = fallbackAdvice[Math.floor(Math.random() * fallbackAdvice.length)];
+        }
         const payload = {
             ...mockWeatherData,
             farmingAdvice: farmingAdvice
