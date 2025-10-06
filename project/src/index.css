@@ -1,0 +1,361 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chat message formatting */
+.prose {
+  color: inherit;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+.prose em {
+  font-style: italic;
+  color: inherit;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.25rem 0;
+  color: inherit;
+}
+
+.prose p {
+  margin: 0.5rem 0;
+  color: inherit;
+}
+
+.prose p:first-child {
+  margin-top: 0;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Streaming indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Chat message formatting */
+.prose {
+  color: inherit;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+.prose em {
+  font-style: italic;
+  color: inherit;
+}
+
+.prose ul {
+  list-style-type: disc;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.25rem 0;
+  color: inherit;
+}
+
+.prose p {
+  margin: 0.5rem 0;
+  color: inherit;
+}
+
+.prose p:first-child {
+  margin-top: 0;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Streaming indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Weather advice formatting */
+.weather-advice {
+  line-height: 1.6;
+}
+
+.weather-advice strong {
+  font-weight: 600;
+  color: #059669;
+}
+
+.weather-advice ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.weather-advice li {
+  margin: 0.5rem 0;
+  color: #374151;
+}
+
+.weather-advice p {
+  margin: 0.75rem 0;
+  color: #374151;
+}
+
+/* Section headers in formatted text */
+.weather-advice h4 {
+  font-weight: 600;
+  color: #059669;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.weather-advice h4:first-child {
+  margin-top: 0;
+}
+
+/* Chat message section headers */
+.prose h4 {
+  font-weight: 600;
+  color: #059669;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.prose h4:first-child {
+  margin-top: 0;
+}
+
+/* Enhanced formatting for chat and weather sections */
+.prose ul {
+  list-style-type: disc;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.5rem 0;
+  color: inherit;
+  line-height: 1.5;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #059669;
+}
+
+.prose h4 {
+  font-weight: 600;
+  color: #059669;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.weather-advice ul {
+  list-style-type: disc;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.weather-advice li {
+  margin: 0.5rem 0;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.weather-advice strong {
+  font-weight: 600;
+  color: #059669;
+}
+
+.weather-advice h4 {
+  font-weight: 600;
+  color: #059669;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Chat message formatting */
+.chat-message ul {
+  list-style-type: disc;
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.chat-message li {
+  margin: 0.25rem 0;
+  color: inherit;
+  line-height: 1.4;
+}
+
+.chat-message strong {
+  font-weight: 600;
+  color: #059669;
+}
+
+.chat-message h4 {
+  font-weight: 600;
+  color: #059669;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.chat-message h4:first-child {
+  margin-top: 0;
+}
+
+/* Ensure proper section spacing */
+.chat-message h4 + ul {
+  margin-top: 0.5rem;
+}
+
+/* Industry-standard AI response formatting */
+.section-header {
+  font-weight: 600;
+  color: #059669;
+  font-size: 1rem;
+  margin: 1rem 0 0.75rem 0;
+  border-left: 4px solid #059669;
+  padding-left: 0.75rem;
+  background: linear-gradient(90deg, #ecfdf5 0%, transparent 100%);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.section-header:first-child {
+  margin-top: 0;
+}
+
+.bullet-item {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  color: inherit;
+  position: relative;
+  text-indent: -1.5rem;
+}
+
+.bullet-item strong {
+  font-weight: 600;
+  color: #059669;
+}
+
+.paragraph {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: inherit;
+}
+
+.paragraph:first-child {
+  margin-top: 0;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Enhanced formatting for weather advice */
+.weather-advice .section-header {
+  color: #059669;
+  background: linear-gradient(90deg, #ecfdf5 0%, transparent 100%);
+}
+
+.weather-advice .bullet-item {
+  color: #374151;
+}
+
+.weather-advice .bullet-item strong {
+  color: #059669;
+  font-weight: 600;
+}
+
+.weather-advice .paragraph {
+  color: #374151;
+}
+
+/* Scheme Modal Formatting */
+.scheme-details .section-header {
+  color: #059669;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  border-left: 4px solid #059669;
+  padding-left: 0.75rem;
+  background: linear-gradient(90deg, #ecfdf5 0%, transparent 100%);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.scheme-details .section-header:first-child {
+  margin-top: 0;
+}
+
+.scheme-details .bullet-item {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.scheme-details .bullet-item strong {
+  color: #059669;
+  font-weight: 600;
+}
+
+.scheme-details .paragraph {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.scheme-details .paragraph strong {
+  color: #059669;
+  font-weight: 600;
+}
+
+/* Chat message specific formatting */
+.chat-message .section-header {
+  color: #059669;
+  font-weight: 600;
+}
+
+.chat-message .bullet-item strong {
+  color: #059669;
+  font-weight: 600;
+}
+
+.chat-message .paragraph strong {
+  color: #059669;
+  font-weight: 600;
+}
