@@ -14,7 +14,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 export async function callGemini(userMessage: string): Promise<string> {
   try {
     // Use the Gemini Pro model
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
     
     const prompt = `You are a friendly agricultural assistant focused on Kerala farming. Provide helpful, accurate, and concise responses about farming practices, crop management, weather advice, and agricultural schemes in Kerala, India. Keep responses under 200 words and be practical and actionable.
 
@@ -45,7 +45,7 @@ User question: ${userMessage}`;
 export async function* callGeminiStream(userMessage: string): AsyncGenerator<string, void, unknown> {
   try {
     // Use the Gemini Pro model
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
     
     const prompt = `You are a friendly agricultural assistant focused on Kerala farming. Provide helpful, accurate, and concise responses about farming practices, crop management, weather advice, and agricultural schemes in Kerala, India. Keep responses under 200 words and be practical and actionable.
 
@@ -79,7 +79,7 @@ User question: ${userMessage}`;
 export async function getWeatherAdvice(location: string, weatherData?: any): Promise<string> {
   try {
     // Use the Gemini Pro model
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
     
     const prompt = `You are an agricultural weather advisor for Kerala, India. Based on the location "${location}" and any available weather data, provide practical farming advice including:
 - Best crops to plant in current conditions

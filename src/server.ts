@@ -99,10 +99,6 @@ app.post('/api/remedy', async (req, res) => {
     // 6. Generate content with Gemini, using the systemInstruction configuration
     const response = await ai.models.generateContent({
       model: 'gemini-2.0-flash',
-      config: {
-        temperature: 0.3,
-        maxOutputTokens: 1024,
-      },
       // Use the dynamically generated contents array for the user message
       contents: [
         { role: 'system', parts: [{ text: systemPrompt }] },
