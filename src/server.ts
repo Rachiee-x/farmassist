@@ -21,19 +21,13 @@ function missingField(res: Response<any, Record<string, any>, number>, field: st
   return errorResponse(res, 400, `Missing ${field} in request body`, undefined);
 }
 
-
 const GEMINI_API_KEY = "AIzaSyDSsb4M93pBObCIZe7MSs81fQqBiC8CCJQ"
-// --- Environment Setup ---
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const PORT = process.env.PORT || 4000;
 const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
 if (!GEMINI_API_KEY) {
   console.warn('Warning: GEMINI_API_KEY not set. /api/chat will not work.');
 }
-if (!OPENAI_API_KEY) {
-  console.warn('Warning: OPENAI_API_KEY not set. /api/translate and /api/remedy will not work.');
-}
+
 // prefix API
 app.use('/api/weather', weatherRouter);
 app.use('/api/govschemes', govSchemesRouter);
